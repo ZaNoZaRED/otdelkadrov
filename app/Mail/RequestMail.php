@@ -21,7 +21,7 @@ class RequestMail extends Mailable
         $this->text = $data->text;
         $this->email = $data->email;
     }
-
+//Da
     public function build()
     {
         return $this->subject('Новая заявка на поиск специальности')
