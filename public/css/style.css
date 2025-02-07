@@ -1,0 +1,803 @@
+/* all css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Verdana', sans-serif;
+    /*margin-left: 240px;
+    margin-right: 240px;*/
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    display: inline-block;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fae013;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.btn-send {
+    display: flex;
+    align-items: center;
+    padding: 5px 30px;
+    font-size: 24px;
+    background-color: #fae013;
+    color: black;
+    border: 3px solid #fae013;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.btn-send:hover {
+    background-color: white;
+    border: 3px solid #fae013;
+}
+
+.btn-send img {
+    width: 63px;
+    height: 63px;
+    margin-left: 10px;
+}
+
+/* section header */
+
+header {
+    margin-top: 70px;
+    margin-left: 240px;
+    margin-right: 240px;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header li {
+    font-size: 24px;
+    
+}
+
+/* section main */
+
+.main {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 240px;
+    margin-right: 240px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 64px;
+    width: 800px;
+    height: auto;
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    margin-top: 64px;   
+    font-weight: normal;
+    font-size: 36px;
+    width: 600px;
+    height: auto;
+    text-align: center;
+    color: #484848;
+}
+
+.main button {
+    margin-top: 125px;
+}
+
+/* section what-is */
+
+.what-is {
+    margin-top: 250px;
+    margin-left: 240px;
+    margin-right: 240px;
+}
+
+h4 {
+    margin: 0;
+    padding: 0; 
+    margin-bottom: 40px;
+    font-weight: normal;
+    font-size: 36px;
+}
+
+.what-is p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+    width: 700px;
+    font-size: 20px;
+}
+
+.what-is ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.what-is li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.what-is li img {
+    padding-right: 15px;
+}
+
+.what-is button {
+    margin-top: 45px;
+}
+
+.container-video {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+video {
+    width: 600px;
+}
+
+/* section steps */
+.steps{
+    margin-left: 240px;
+    margin-right: 240px;
+}
+.steps h4 {
+    margin-top: 250px;
+    text-align: center;
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+    font-weight: normal;
+    font-size: 32px;
+}
+
+.steps p {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.step-1, .step-3, .step-5 {
+    display: flex;
+    align-items: center;
+}
+
+.step-text-1, .step-text-3, .step-text-5 {
+    padding-left: 10px;
+}
+
+.step-2, .step-4 {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.step-text-2, .step-text-4 {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.step-text-2 h5, .step-text-4 h5 {
+    text-align: right;
+}
+
+.step-5 button {
+    margin-left: 170px;
+}
+
+/* section modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close-btn {
+    font-size: 30px;
+    color: #aaa;
+    float: right;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* section session success */
+
+.alert {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    font-family: 'Verdana', sans-serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alert::before {
+    content: '✔️';
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.alert {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alert {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.about {
+    height: 400px;
+    padding: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex; /* Используем Flexbox для центрирования */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    justify-content: center; /* Центрируем элементы по вертикали */
+    text-align: center; /* Центрируем текст */
+    background-color: #FAE013; /* Желтый фон */
+}
+
+.about ul {
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.about li {
+    display: flex; /* Используем Flexbox для расположения элементов в строку */
+    align-items: center; /* Центрируем элементы по вертикали */
+    font-size: 32px;
+}
+.about li p{
+    margin-left: 20px;
+}
+
+
+.why-we {
+    text-align: center; /* Центрируем текст */
+    margin-top: 30px;
+}
+
+.why-we ul {
+    margin-top: 130px;
+    display: flex; /* Используем Flexbox для расположения элементов в строку */
+    justify-content: space-around; /* Центрируем карточки в контейнере */
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.why-we li {
+    margin: 0 15px; /* Добавляем отступы между элементами списка */
+    max-width: 380px; /* Ограничиваем максимальную ширину карточки */
+    text-align: center; /* Центрируем текст внутри карточки */
+    font-size: 32px;
+}
+
+.why-we img {
+    max-width: 100%; /* Делаем изображение адаптивным */
+    height: auto; /* Сохраняем пропорции изображения */
+}
+
+
+
+
+#callbackForm {
+    background-color: #FAE013; /* Задний фон желтый */
+    border-radius: 20px; /* Скругление углов */
+    padding: 20px; /* Отступы по всему блоку */
+    width: 1200px; /* Ширина блока */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для визуального восприятия */
+    display: flex; /* Flexbox для выравнивания */
+    justify-content: space-around; /* Пространство между входами и текстом/кнопкой */
+}
+
+h4 {
+    text-align: center; /* Заголовок по центру */
+}
+.callback {
+    display: flex;
+    flex-direction: column; /* Вертикальное выравнивание */
+    align-items: center; /* Центрирование по горизонтали */
+    justify-content: center; /* Центрирование по вертикали (если необходимо) */
+}
+
+
+.form-input {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; /* Поля ввода вертикально */
+}
+
+.form-input input {
+    margin-bottom: 10px; /* Отступ между полями ввода */
+    padding: 10px; /* Отступ внутри полей */
+    border: 1px solid #ccc; /* Цвет границы */
+    border-radius: 5px; /* Скругление углов полей ввода */
+    width: 500px;
+}
+
+.form-info {
+    font-size: 24px;
+    text-align: center; /* Текст и кнопка по центру */
+}
+
+.form-info p {
+    width: 400px;
+}
+
+.callback button {
+    display: flex;
+    align-items: center;
+    padding: 5px 30px;
+    font-size: 24px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.callback button img {
+    width: 63px;
+    height: 63px;
+    margin-left: 10px;
+}
+
+/* Эффекты при наведении на кнопку */
+.callback button:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+select:focus,
+input[type="number"]:focus {
+    border-color: #FAE013;
+    outline: none;
+}
+
+.specialty-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.specialty-group select,
+.specialty-group input[type="number"] {
+    width: 48%;
+}
+
+.add-specialty-btn {
+    background-color: #FAE013;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.add-specialty-btn:hover {
+    background-color: #FAE013;
+}
+
+
+/* Основной стиль для контейнера */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Заголовок */
+h3 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Стиль для карточек */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.col-md-4 {
+    flex: 1 1 calc(33.3333% - 20px);
+    max-width: calc(33.3333% - 20px);
+}
+
+/* Стиль для каждой карточки */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    background-color: #fff;
+    position: relative;
+    color: #000000;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Название специальности */
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Кнопка заказа */
+.btn {
+    background-color: #FAE013;
+    color: #000000;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f1d70d;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #e2e6ea;
+}
+
+.table th {
+    background-color: #FAE013;
+    color: rgb(0, 0, 0);
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table td {
+    font-size: 16px;
+}
+
+
+.moree {
+    background-color: #FAE013;
+    margin: auto;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #000000;
+}
+
+.moree:hover {
+    background-color: #f1d70d;
+}
+
+
+.specialization-cards {
+    display: flex;
+    justify-content: space-between; /* Распределение карточек по горизонтали */
+    flex-wrap: wrap; /* Позволяет карточкам обтекать */
+    gap: 20px; /* Задаем промежуток между карточками */
+    max-width: calc(3 * 500px + 2 * 20px); /* Максимальная ширина для 3 карточек, включая gap */
+    margin: auto;
+    font-size: 15px;
+}
+
+.specialization-card {
+    border: 5px solid #FAE013; /* Назначить границу */
+    border-radius: 30px; /* Сгладить углы */
+    padding: 10px; /* Добавить отступы */
+    width: 400px; /* Фиксированная ширина карточки */
+    height: 500px; /* Фиксированная высота карточки */
+    margin-top: 30px;
+    text-align: center;
+}
+.specialization-card h5{
+    text-align: center;
+    font-size: 30px;
+}
+
+.specialization-card img {
+    width: 400px; /* Автоматическая ширина для сохранения пропорций */
+    height: 300px; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 8px; /* Сгладить углы изображения */
+}
+/* Общие стили для изображений */
+
+/* Общие стили для мобильной версии */
+
+/* Общие стили для мобильной версии */
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        text-align: center; /* Центрирование текста на экране */
+    }
+
+    header {
+        margin: 0 10px; /* Уменьшение отступов */
+    }
+
+    header ul {
+        flex-direction: column; /* Упорядочение элементов в столбик */
+        align-items: center; /* Центрирование элементов */
+    }
+
+    header li {
+        font-size: 20px; /* Уменьшение размера шрифта */
+    }
+
+    .main {
+        margin: 30px 10px; /* Уменьшение отступов с границ */
+    }
+
+    h1, h2, h3, h4, h5 {
+        width: 100%; /* Ширина 100% для заголовков */
+        padding: 0 10px; /* Добавление боковых отступов */
+    }
+
+    .what-is p, .about p, .steps p {
+        font-size: 16px; /* Уменьшение размера текста */
+        width: 100%; /* Ширина на 100% для мобильных */
+    }
+
+    .what-is, .steps, .about {
+        margin: 0 10px; /* Уменьшение отступов слева и справа */
+    }
+
+    .btn-send {
+        padding: 10px 20px; /* Уменьшение отступов для кнопки */
+        font-size: 20px; /* Уменьшение размера текста */
+    }
+
+    .callback {
+        width: 100%; /* Увеличение ширины до 100% */
+        padding: 0 10px; /* Добавление боковых отступов */
+    }
+
+    .form-input input {
+        width: 100%; /* Ширина 100% для полей ввода */
+        margin: 10px 0; /* Увеличение отступа между полями */
+    }
+
+    .specialization-cards {
+        flex-direction: column; /* Карточки в одном столбце */
+        align-items: center; /* Центрирование карточек */
+    }
+
+    .specialization-card {
+        width: 90%; /* Ширина карточки 90% */
+        height: auto; /* Автоматическая высота */
+        margin: 20px 0; /* Увеличение отступа между карточками */
+    }
+
+    .specialization-card img {
+        width: 100%; /* Изображение 100% ширины карточки */
+        height: auto; /* Сохранение пропорций */
+    }
+
+    .step-5 {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .step-5 button {
+        margin: 40px 0 40px 0;
+    }
+
+    .alert {
+        font-size: 16px; /* Уменьшение размера текста */
+    }
+
+    .why-we ul {
+        flex-direction: column; /* Упорядочение элементов в столбик */
+        align-items: center; /* Центрирование карточек */
+    }
+
+    .why-we li {
+        margin: 10px 0; /* Отступы между элементами */
+        font-size: 26px; /* Уменьшение размера текста */
+        max-width: 100%; /* Ограничение ширины для мобильных */
+    }
+
+    .form-input {
+        display: none;
+    }
+}
+
+/* для более маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px; /* Еще меньше размер заголовка */
+    }
+
+    h2 {
+        font-size: 20px; /* Уменьшение размера заголовка */
+    }
+
+    h3, h4 {
+        font-size: 24px; /* Уменьшение размера заголовка */
+    }
+
+    h5 {
+        font-size: 20px; /* Уменьшение размера заголовка */
+    }
+
+    .btn-send {
+        padding: 5px 15px; /* Уменьшение отступов для кнопки */
+        font-size: 18px; /* Уменьшение размера текста */
+    }
+
+    .form-info {
+        font-size: 20px; /* Уменьшение размера текста */
+    }
+
+    .callback button {
+        font-size: 20px; /* Уменьшение размера текста кнопки */
+    }
+
+    .specialization-card {
+        width: 95%; /* Ширина карточки 95% для большей мобильности */
+        margin: 15px 0; /* Увеличение отступа между карточками */
+    }
+
+    .callback {
+        display: none;
+    }
+
+    .about ul {
+        flex-direction: row;
+    }
+
+    .about ul img {
+        display: none;
+    }
+
+    .about ul p {
+        margin-left: 0;
+    }
+
+    nav img {
+        margin-bottom: 25px;
+    } 
+}
